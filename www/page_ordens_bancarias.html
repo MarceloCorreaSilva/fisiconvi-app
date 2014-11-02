@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>FiSiconvi</title>
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.4.min.css" />
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/jquery.mobile-1.4.4.min.js"></script>
+		<script src="js/default.js"></script>
+	</head>
+	<body>
+
+		<!-- page ordens_bancarias -->
+		<div data-role="page" id="page_ordens_bancarias" data-theme="a">
+			<!-- header -->
+			<div data-role="header" data-position="fixed">
+				<a href="#" data-icon="arrow-l" data-iconpos="notext" class="back">Voltar</a>
+				<h1>FiSiconv</h1>
+				<a href="#" data-icon="arrow-r" data-iconpos="notext">Avançar</a>
+			</div>
+			<!-- /header -->
+
+			<!-- content -->
+			<div role="main" class="ui-content">
+				<ul data-role="listview" data-filter="true" data-filter-placeholder="Busque órdens bancarias..." data-inset="true" id="ordens_bancarias">
+
+				</ul>
+			</div>
+			<!-- /content -->
+			
+			<!-- footer -->
+		    <div data-role="footer" data-position="fixed">
+		    	<!-- navbar -->
+		        <div data-role="navbar" data-iconpos="bottom">
+		            <ul>
+		                <li><a href="#" data-icon="grid">Summary</a></li>
+		                <li><a href="#" data-icon="star">Favs</a></li>
+		                <li><a href="#" data-icon="gear">Setup</a></li>
+		            </ul>
+		        </div>
+		        <!-- /navbar -->
+		    </div>
+			<!-- /footer -->
+		</div>
+		<!-- /page ordens_bancarias -->
+
+	</body>
+</html>

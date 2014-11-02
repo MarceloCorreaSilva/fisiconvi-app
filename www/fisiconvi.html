@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FiSiconvi</title>
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.4.min.css" />
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/jquery.mobile-1.4.4.min.js"></script>
+        <script src="js/pages/page_municipios.js"></script>
+        <script src="js/pages/page_convenios.js"></script>
+        <script src="js/pages/page_ordens_bancarias.js"></script>
+        <script src="js/pages/page_orgaos.js"></script>
+        <script src="js/pages/page_pessoas_responsaveis.js"></script>
+        <script src="js/pages/page_proponentes.js"></script>
+        <script src="js/pages/page_propostas.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $("#municipios").on('click', function(){
+                    Municipios.initialize();
+                });
+
+                $("#convenios").on('click', function(){
+                    Convenios.initialize();
+                });
+
+                $("#ordens_bancarias").on('click', function(){
+                    OrdensBancarias.initialize();
+                });
+
+                $("#orgaos").on('click', function(){
+                    Orgaos.initialize();
+                });
+
+                $("#pessoas_responsaveis").on('click', function(){
+                    PessoasResponsaveis.initialize();
+                });
+
+                $("#proponentes").on('click', function(){
+                    Proponentes.initialize();
+                });
+
+                $("#propostas").on('click', function(){
+                    Propostas.initialize();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        
+         <!-- page one -->
+        <div data-role="page" id="one" data-theme="a">
+            <!-- header -->
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-iconpos="notext" class="back">Voltar</a>
+                <h1>FiSiconv</h1>
+                <a href="#" data-icon="arrow-r" data-iconpos="notext">Avançar</a>
+            </div>
+            <!-- /header -->
+
+            <!-- content -->
+            <div role="main" class="ui-content">
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="#page_convenios" data-transiction="flow" id="convenios">Convênios</a></li>
+                    <li><a href="#page_municipios" data-rel="slidefade" id="municipios">Municípios</a></li>
+                    <li><a href="#page_proponentes" data-rel="slidefade" id="proponentes">Proponentes</a></li>
+                    <li><a href="#page_propostas" data-rel="slidefade" id="propostas">Propostas</a></li>
+                    <li><a href="#page_pessoas_responsaveis" data-rel="slidefade" id="pessoas_responsaveis">Responsáveis</a></li>
+                    <li><a href="#page_orgaos" data-rel="slidefade" id="orgaos">Órgãos</a></li>
+                    <li><a href="#page_ordens_bancarias" data-rel="slidefade" id="ordens_bancarias">Órdens Bancarias</a></li>
+                    <li><a href="#page_ranking" data-rel="slidefade">Ranking Maiores Proponentes</a></li>
+                </ul>
+            </div>
+            <!-- /content -->
+            
+            <!-- footer -->
+            <div data-role="footer" data-position="fixed">
+                <!-- navbar -->
+                <div data-role="navbar" data-iconpos="bottom">
+                    <ul>
+                        <li><a href="#" data-icon="grid">Summary</a></li>
+                        <li><a href="#" data-icon="star">Favs</a></li>
+                        <li><a href="#" data-icon="gear">Setup</a></li>
+                    </ul>
+                </div>
+                <!-- /navbar -->
+            </div>
+            <!-- /footer -->
+        </div>
+        <!-- /page one -->
+
+        <!-- page convenios -->
+        <div data-role="page" id="page_convenios" data-theme="a">
+            <!-- header -->
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-iconpos="notext" class="back">Voltar</a>
+                <h1>FiSiconv</h1>
+                <a href="#" data-icon="arrow-r" data-iconpos="notext">Avançar</a>
+            </div>
+            <!-- /header -->
+
+            <!-- content -->
+            <div role="main" class="ui-content">                
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Busque convenios..." data-inset="true"></ul>
+            </div>
+            <!-- /content -->
+            
+            <!-- footer -->
+            <div data-role="footer" data-position="fixed">
+                <!-- navbar -->
+                <div data-role="navbar" data-iconpos="bottom">
+                    <ul>
+                        <li><a href="#" data-icon="grid">Summary</a></li>
+                        <li><a href="#" data-icon="star">Favs</a></li>
+                        <li><a href="#" data-icon="gear">Setup</a></li>
+                    </ul>
+                </div>
+                <!-- /navbar -->
+            </div>
+            <!-- /footer -->
+        </div>
+        <!-- /page convenios -->
+
+        <!-- page municipios -->
+        <div data-role="page" id="page_municipios" data-theme="a">
+            <!-- header -->
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-iconpos="notext" class="back">Voltar</a>
+                <h1>FiSiconv</h1>
+                <a href="#" data-icon="arrow-r" data-iconpos="notext">Avançar</a>
+            </div>
+            <!-- /header -->
+
+            <!-- content -->
+            <div role="main" class="ui-content">
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Busque municipios..." data-inset="true"></ul>
+            </div>
+            <!-- /content -->
+            
+            <!-- footer -->
+            <div data-role="footer" data-position="fixed">
+                <!-- navbar -->
+                <div data-role="navbar" data-iconpos="bottom">
+                    <ul>
+                        <li><a href="#" data-icon="grid">Summary</a></li>
+                        <li><a href="#" data-icon="star">Favs</a></li>
+                        <li><a href="#" data-icon="gear">Setup</a></li>
+                    </ul>
+                </div>
+                <!-- /navbar -->
+            </div>
+            <!-- /footer -->
+        </div>
+        <!-- /page municipios -->
+
+        <!-- page ordens_bancarias -->
+        <div data-role="page" id="page_ordens_bancarias" data-theme="a">
+            <!-- header -->
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-iconpos="notext" class="back">Voltar</a>
+                <h1>FiSiconv</h1>
+                <a href="#" data-icon="arrow-r" data-iconpos="notext">Avançar</a>
+            </div>
+            <!-- /header -->
+
+            <!-- content -->
+            <div role="main" class="ui-content">
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Busque órdens bancarias..." data-inset="true"></ul>
+            </div>
+            <!-- /content -->
+            
+            <!-- footer -->
+            <div data-role="footer" data-position="fixed">
+                <!-- navbar -->
+                <div data-role="navbar" data-iconpos="bottom">
+                    <ul>
+                        <li><a href="#" data-icon="grid">Summary</a></li>
+                        <li><a href="#" data-icon="star">Favs</a></li>
+                        <li><a href="#" data-icon="gear">Setup</a></li>
+                    </ul>
+                </div>
+                <!-- /navbar -->
+            </div>
+            <!-- /footer -->
+        </div>
+        <!-- /page ordens_bancarias -->
+
+        <!-- page orgaos -->
+        <div data-role="page" id="page_orgaos" data-theme="a">
+            <!-- header -->
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-iconpos="notext" class="back">Voltar</a>
+                <h1>FiSiconv</h1>
+                <a href="#" data-icon="arrow-r" data-iconpos="notext">Avançar</a>
+            </div>
+            <!-- /header -->
+
+            <!-- content -->
+            <div role="main" class="ui-content">
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Busque órgãos..." data-inset="true"></ul>
+            </div>
+            <!-- /content -->
+            
+            <!-- footer -->
+            <div data-role="footer" data-position="fixed">
+                <!-- navbar -->
+                <div data-role="navbar" data-iconpos="bottom">
+                    <ul>
+                        <li><a href="#" data-icon="grid">Summary</a></li>
+                        <li><a href="#" data-icon="star">Favs</a></li>
+                        <li><a href="#" data-icon="gear">Setup</a></li>
+                    </ul>
+                </div>
+                <!-- /navbar -->
+            </div>
+            <!-- /footer -->
+        </div>
+        <!-- /page orgaos -->
+
+        <!-- page pessoas_responsaveis -->
+        <div data-role="page" id="page_pessoas_responsaveis" data-theme="a">
+            <!-- header -->
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-iconpos="notext" class="back">Voltar</a>
+                <h1>FiSiconv</h1>
+                <a href="#" data-icon="arrow-r" data-iconpos="notext">Avançar</a>
+            </div>
+            <!-- /header -->
+
+            <!-- content -->
+            <div role="main" class="ui-content">
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Busque responsáveis..." data-inset="true"></ul>
+            </div>
+            <!-- /content -->
+            
+            <!-- footer -->
+            <div data-role="footer" data-position="fixed">
+                <!-- navbar -->
+                <div data-role="navbar" data-iconpos="bottom">
+                    <ul>
+                        <li><a href="#" data-icon="grid">Summary</a></li>
+                        <li><a href="#" data-icon="star">Favs</a></li>
+                        <li><a href="#" data-icon="gear">Setup</a></li>
+                    </ul>
+                </div>
+                <!-- /navbar -->
+            </div>
+            <!-- /footer -->
+        </div>
+        <!-- /page pessoas_responsaveis -->
+
+        <!-- page proponentes -->
+        <div data-role="page" id="page_proponentes" data-theme="a">
+            <!-- header -->
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-iconpos="notext" class="back">Voltar</a>
+                <h1>FiSiconv</h1>
+                <a href="#" data-icon="arrow-r" data-iconpos="notext">Avançar</a>
+            </div>
+            <!-- /header -->
+
+            <!-- content -->
+            <div role="main" class="ui-content">
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Busque proponentes..." data-inset="true"></ul>
+            </div>
+            <!-- /content -->
+            
+            <!-- footer -->
+            <div data-role="footer" data-position="fixed">
+                <!-- navbar -->
+                <div data-role="navbar" data-iconpos="bottom">
+                    <ul>
+                        <li><a href="#" data-icon="grid">Summary</a></li>
+                        <li><a href="#" data-icon="star">Favs</a></li>
+                        <li><a href="#" data-icon="gear">Setup</a></li>
+                    </ul>
+                </div>
+                <!-- /navbar -->
+            </div>
+            <!-- /footer -->
+        </div>
+        <!-- /page proponentes -->
+
+        <!-- page propostas -->
+        <div data-role="page" id="page_propostas" data-theme="a">
+            <!-- header -->
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-iconpos="notext" class="back">Voltar</a>
+                <h1>FiSiconv</h1>
+                <a href="#" data-icon="arrow-r" data-iconpos="notext">Avançar</a>
+            </div>
+            <!-- /header -->
+
+            <!-- content -->
+            <div role="main" class="ui-content">
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Busque propostas..." data-inset="true"></ul>
+            </div>
+            <!-- /content -->
+            
+            <!-- footer -->
+            <div data-role="footer" data-position="fixed">
+                <!-- navbar -->
+                <div data-role="navbar" data-iconpos="bottom">
+                    <ul>
+                        <li><a href="#" data-icon="grid">Summary</a></li>
+                        <li><a href="#" data-icon="star">Favs</a></li>
+                        <li><a href="#" data-icon="gear">Setup</a></li>
+                    </ul>
+                </div>
+                <!-- /navbar -->
+            </div>
+            <!-- /footer -->
+        </div>
+        <!-- /page propostas -->
+
+        <!-- page ranking -->
+        <div data-role="page" id="page_ranking" data-theme="a">
+            <!-- header -->
+            <div data-role="header" data-position="fixed">
+                <a href="#" data-icon="arrow-l" data-iconpos="notext" class="back">Voltar</a>
+                <h1>FiSiconv</h1>
+                <a href="#" data-icon="arrow-r" data-iconpos="notext">Avançar</a>
+            </div>
+            <!-- /header -->
+
+            <!-- content -->
+            <div role="main" class="ui-content">
+                
+            </div>
+            <!-- /content -->
+            
+            <!-- footer -->
+            <div data-role="footer" data-position="fixed">
+                <!-- navbar -->
+                <div data-role="navbar" data-iconpos="bottom">
+                    <ul>
+                        <li><a href="#" data-icon="grid">Summary</a></li>
+                        <li><a href="#" data-icon="star">Favs</a></li>
+                        <li><a href="#" data-icon="gear">Setup</a></li>
+                    </ul>
+                </div>
+                <!-- /navbar -->
+            </div>
+            <!-- /footer -->
+        </div>
+        <!-- /page ranking -->
+
+    </body>
+</html>
